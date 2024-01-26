@@ -30,17 +30,18 @@ namespace chytKrtka
                 int nahodneCislo = krtek.ObjevSe();
                 int zasah = hrac.Zasahni();
 
-                if (nahodneCislo == zasah)
+                if (krtek.BylJsemZasazen(nahodneCislo, zasah))
                 {
                     pocetStisknuti++;
                     Console.WriteLine($"Správný zásah! Celkový počet zásahů: {pocetStisknuti}");
 
                 }
                 else { Console.WriteLine("Nesprávný zásah."); }
-                Console.Clear();
+                
 
             }
-            Console.WriteLine($"Hra skončila! Stihl(a) jsi stisknout {pocetStisknuti}");
+            Console.Clear();
+            Console.WriteLine($"Hra skončila! Stihl(a) jsi stisknout {pocetStisknuti} čísel!");
 
 
 

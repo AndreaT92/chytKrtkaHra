@@ -8,8 +8,8 @@ namespace chytKrtka
 {
     internal class Krtek
     {
-        
-        public int ObjevSe() 
+
+        public int ObjevSe()
         {
             Random generator = new Random();
             int nahodneCislo = generator.Next(0, 9);
