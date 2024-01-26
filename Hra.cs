@@ -33,10 +33,10 @@ namespace chytKrtka
                 if (krtek.BylJsemZasazen(nahodneCislo, zasah))
                 {
                     pocetStisknuti++;
-                    Console.WriteLine($"Správný zásah! Celkový počet zásahů: {pocetStisknuti}");
+                    Console.WriteLine($"\nSprávný zásah! Celkový počet zásahů: {pocetStisknuti}");
 
                 }
-                else { Console.WriteLine("Nesprávný zásah."); }
+                else { Console.WriteLine("\nNesprávný zásah."); }
                 
 
             }

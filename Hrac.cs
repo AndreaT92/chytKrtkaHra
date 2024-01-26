@@ -10,16 +10,15 @@ namespace chytKrtka
     {
         public int Zasahni()
         {
-            string zadaneCislo = Console.ReadLine();
-            int cislo;
-            bool jeCislo = int.TryParse(zadaneCislo, out cislo);
-                while (!jeCislo)
+            ConsoleKeyInfo informaceOKlavese = Console.ReadKey();
+            char znak = informaceOKlavese.KeyChar;
+            while (!char.IsDigit(znak))
             {
-                Console.WriteLine("Toto neni cislo");
-                zadaneCislo = Console.ReadLine();
-                jeCislo = int.TryParse(zadaneCislo, out cislo);
+                Console.WriteLine("Toto není číslo");
+                informaceOKlavese = Console.ReadKey();
+                znak = informaceOKlavese.KeyChar;
             }
-            return cislo;
+            return int.Parse(znak.ToString());   
         }
 
     }
